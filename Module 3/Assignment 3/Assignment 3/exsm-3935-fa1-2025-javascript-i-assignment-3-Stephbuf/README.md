@@ -1,0 +1,2 @@
+This program processes the total cost of goods, cash payment, and a discount code while using exceptions to ensure valid input and accurate calculations. It throws and handles exceptions for invalid discount codes, insufficient payment, and any non-numeric values entered for either the total cost or the cash payment. These safeguards ensure the program runs reliably, guides the user with clear error messages, and prevents incorrect or incomplete transactions.
+
