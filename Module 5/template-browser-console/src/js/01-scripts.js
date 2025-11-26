@@ -1,41 +1,43 @@
+//For Loop
+//Initialization; Condition; Increment
 
 async function main() {
-  let orderNumber = new Set(["abc123"]);
-  let quantities = [];
-  // const alphanumericTest = /^[a-zA-z0-9]+$/; Option 1
-    const alphanumericTest = /[a-zA-z0-9][a-zA-z0-9][a-zA-z0-9][a-zA-z0-9][a-zA-z0-9][a-zA-z0-9]/; // Option 2
-
-  // "/" -> indicateds the start and end of a regex 
-  // "^" -> indicates the start of the pattern
-  // "$" -> indicates the end of the pattern
-  // "[]" -> indicates a character class
-  // "+" -> indicates one or many characters
-  // "[a-zA-Z0-9"] -> indicates characters a to z, A to Z, and 0 to 9
-
-
-  let orderNumberInput = await input("Enter an order number (6 Alphanumeric characters):");
-
-  if (orderNumberInput.length !== 6) { // Validate length !=== 6 means not equal to 6
-    output(`Invalid order number. It must be 6 alphanumeric characters. You Entered ${orderNumberInput.length} characters. Terminating program.`);
-  }
-  else if (!alphanumericTest.test(orderNumberInput)) { // Validate alphanumeric characters
-    output(`Invalid order number only contain numberic and alphabetical characters. Terminating program.`);
-  }
-  else if (orderNumber.has(orderNumberInput)) { // Check for duplicate order number
-    output(`Duplicate order number. Terminating program.`);
-  }
-  else {
-    let quantity = await input("Product Quantity (1-100): "); // Validate quantity
-    quantity = Number(quantity);
-
-    if (isNaN(quantity) || !Number.isInteger(quantity)) {
-      output(`Invalid number, must be a whole number between 1 and 100.`);
-    } else if (quantity < 1 || quantity > 100) {
-      output(`Invalid quantiy, must be between 1 and 100.`);
-    } else {
-      orderNumbers.add(orderNumber);
-      quantities.push(quantity); // adds to the end of the array
+    for (let number = 0; number <=5; number++) { //starting at 0, ending at 5, incrementing by 1
+        output(number);
+        //Run 1: is 0  <=5 No. Output 0. Increment to 1
+        //Run 2: is 1  <=5 No. Output 1. Increment to 2
+        //Run 3: is 2  <=5 No. Output 2. Increment to 3
+        //Run 4: is 3  <=5 No. Output 3. Increment to 4
+        //Run 5: is 4  <=5 No. Output 4. Increment to 5
+        //Run 6: is 5  <=5 No. Output 5. Increment to 6
+        //Run 7: is 6  <=5 Yes. Exit loop.
     }
 
-  }
+    const student = {
+      Alice:"A+",
+      Bob:"B-",
+      Charlie:"C"
+}
+for (let studentName in student) {
+ student[studentName] = "A+"; //change all grades to A+
+  output(`${studentName} has a grade of ${student[studentName]}`);
+}
+
+colors = ["red", "green", "blue"];
+let counter = 0;
+
+for (let color of colors) {
+  counter++;
+output( 'Color ' + counter + ': ' + color);
+
+}
+
+let counter2 = 0;
+while (counter2 < 5) {
+  output("Not yet 5");
+  counter2+=3;  
+}
+//Run 1: counter2 = 0. Is 0 < 5? Yes. Output "Not yet 5". 
+//Run 2: counter2 = 3. Is 3 < 5? Yes. Output "Not yet 5".
+//Run 3: counter2 = 6. Is 6 < 5? No. Exit loop.
 }
