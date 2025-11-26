@@ -40,4 +40,17 @@ while (counter2 < 5) {
 //Run 1: counter2 = 0. Is 0 < 5? Yes. Output "Not yet 5". 
 //Run 2: counter2 = 3. Is 3 < 5? Yes. Output "Not yet 5".
 //Run 3: counter2 = 6. Is 6 < 5? No. Exit loop.
+
+let password;
+
+while (password !== "1234") {
+  password = await input("Password: (while):");
+}
+
+do {
+  password = await input("Password (while):");
+} while (password !== "1234");
+
+
+
 }
